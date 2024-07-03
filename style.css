@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: hsl(30, 38%, 92%);
+}
+img{
+    display: block;
+    width: 100%;
+}
+main{
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 10px;
+    width: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+}
+main div{
+    width: 50%;
+}
+.desktopImage{
+    border-radius: 10px 0 0 10px;
+    height: 100%;
+}
+.mobileImage{
+    display: none;
+    border-radius: 10px 10px 0 0;
+}
+.product{
+    padding: 32px;
+}
+.productTitle{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: hsl(228, 12%, 48%);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+.productName{
+    margin: 25px 0;
+    font-family: "Fraunces", serif;
+    font-weight: 700;
+    line-height: normal;
+    color: hsl(212, 21%, 14%);
+}
+
+.productDescription{
+    margin-bottom: 35px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.3rem;
+    color: hsl(228, 12%, 48%);
+}
+.price{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.price p{
+    width: 50%;
+    font-family: "Fraunces", serif;
+}
+.currentPrice{
+    color: hsl(158, 36%, 37%);
+    font-weight: 700;
+    font-size: 28px;
+}
+.initialPrice{
+    padding-left: 10px;
+    color: hsl(228, 12%, 48%);
+    text-decoration: line-through;
+}
+
+button{
+    display: block;
+    width: 100%;
+    margin-top: 32px;
+    padding: 15px 0;
+    border: none;
+    border-radius: 8px;
+    background-color: hsl(158, 36%, 37%);
+    color: hsl(0, 0%, 100%);
+    cursor: pointer;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+}
+button:hover{
+    background-color: hsl(158, 38%, 26%);
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    font-size: 17px;
+    font-family: "Montserrat", sans-serif;
+}
+footer a, footer a:visited{
+    color: hsl(158, 36%, 37%);
+    text-decoration: none;
+}
+footer a:hover{
+    color: hsl(158, 45%, 60%);
+}
+
+@media(max-width: 768px){
+    main{
+        width: 90%;
+        margin: 20px auto;
+        position: static;
+        transform: translate(0,0);
+        flex-direction: column;
+    }
+    main div{
+        width: 100%;
+    }
+    .desktopImage{
+        display: none;
+    }
+    .mobileImage{
+        display: block;
+    }
+
+    footer{
+        position: static;
+
+    }
+}
